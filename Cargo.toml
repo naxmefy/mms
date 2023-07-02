@@ -1,0 +1,21 @@
+[workspace]
+members = [
+    "crates/*"
+]
+
+[workspace.package]
+version = "0.1.0"
+rust-version = "1.70"
+edition = "2021"
+authors = [
+    "Mohammed R.W Neundorf <ninevillage@gmail.com>"
+]
+description = "merchandise management system"
+documentation = "https://nax.me/mms"
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
