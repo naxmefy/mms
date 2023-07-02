@@ -1,0 +1,41 @@
+[book]
+title = "mms"
+description = "Information and manuals about mms"
+authors = [
+    "Mohammed R.W. Neundorf [https://github.com/naxmefy]"
+]
+language = "en"
+multilingual = false
+src = "src"
+
+[rust]
+edition = "2021"
+
+[build]
+extra-watch-dirs = [
+    "assets"
+]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output.html]
+mathjax-support = true
+site-url = "/mms/"
+git-repository-url = "https://github.com/naxmefy/mms/tree/main/book"
+edit-url-template = "https://github.com/naxmefy/mms/edit/main/book/{path}"
+additional-js = [
+    "assets/js/mermaid.min.js",
+    "assets/js/mermaid-init.js"
+]
+
+[output.html.search]
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 2
+
+[output.html.redirect]
