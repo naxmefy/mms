@@ -1,16 +1,16 @@
 # Summary
 
-[Introduction](introduction.md)
+[Introduction](/)
 
-[Features](features.md)
+[Features](features)
 
 ---
 
 # Manual
 
-- [Getting started](manual/getting-started.md)
-  - [Installation](manual/installation.md)
-  - [Configuration](manual/configuration.md)
+- [Getting started](manual/getting-started)
+  - [Installation](manual/installation)
+  - [Configuration](manual/configuration)
   - [Hello, MMS]()
 - [CLI]()
   - [Usage]()
@@ -38,4 +38,4 @@
 
 [Changelog]()
 
-[Roadmap](./roadmap.md)
+[Roadmap](roadmap)
