@@ -21,13 +21,15 @@ command = "mdbook-mermaid"
 
 [output.html]
 mathjax-support = true
+cname = "nax.me"
 site-url = "/mms/"
-git-repository-url = "https://github.com/naxmefy/mms/tree/main/book"
-edit-url-template = "https://github.com/naxmefy/mms/edit/main/book/{path}"
+input-404 = "not-found.md"
 additional-js = [
     "assets/js/mermaid.min.js",
     "assets/js/mermaid-init.js"
 ]
+git-repository-url = "https://github.com/naxmefy/mms/tree/main/book"
+edit-url-template = "https://github.com/naxmefy/mms/edit/main/book/{path}"
 
 [output.html.search]
 limit-results = 20
