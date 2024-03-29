@@ -1,3 +1,5 @@
+name: Deploy Book to GitHub Pages
+
 on:
   push:
     branches:
