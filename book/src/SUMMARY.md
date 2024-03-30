@@ -1,17 +1,34 @@
 # Summary
 
-[Introduction](/)
+[Home](README.md)
 
-[Features](features)
+[Introduction](introduction.md)
+
+[Features](features.md)
 
 ---
 
-# Manual
+# User Guide
 
-- [Getting started](manual/getting-started)
-  - [Installation](manual/installation)
-  - [Configuration](manual/configuration)
-  - [Hello, MMS]()
+- [Getting Started]()
+  - [Prerequisites]()
+  - [Installation]()
+  - [Configuration]()
+  - [Uninstallation]()
+- [Server]()
+  - [Installation]()
+  - [Configuration]()
+  - [Scaling]()
+  - [Backup]()
+- [Security]()
+- [Administration]()
+- [Developing]()
+- [Upgrading]()
+
+---
+
+# Reference
+
 - [CLI]()
   - [Usage]()
   - [Configuration]()
@@ -38,4 +55,4 @@
 
 [Changelog]()
 
-[Roadmap](roadmap)
+[Roadmap](roadmap.md)
