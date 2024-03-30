@@ -2,11 +2,10 @@ name: Deploy Book to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
     paths:
-      - .github/workflows/book.yml
-      - ./book/*
+      - '.github/workflows/book.yml'
+      - 'book/*'
 
 defaults:
   run:
