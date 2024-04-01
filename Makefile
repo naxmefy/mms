@@ -16,6 +16,7 @@ test: pre-check
 	@cargo test
 check: pre-check
 	@cargo check
+	@cargo fmt --check
 
 book-check:
 	@mdbook --version >/dev/null 2>&1 || (echo "ERROR: mdbook is required."; exit 1)
