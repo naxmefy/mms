@@ -1,9 +1,13 @@
-name: Check Code
+name: Test Code
 
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  check:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,5 +25,5 @@ jobs:
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: ${{ runner.os }}-cargo-
 
-      - name: Execute Checks
-        run: make check
+      - name: Execute Tests
+        run: make Test
