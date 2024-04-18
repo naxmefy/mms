@@ -12,7 +12,7 @@ authors = [
     "Mohammed R.W Neundorf <ninevillage@gmail.com>"
 ]
 description = "merchandise management system"
-documentation = "https://nax.me/mms"
+documentation = "https://mms.nax.me"
 
 [profile.release]
 strip = true

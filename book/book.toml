@@ -21,8 +21,8 @@ command = "mdbook-mermaid"
 
 [output.html]
 mathjax-support = true
-cname = "nax.me"
-site-url = "/mms/"
+cname = "mms.nax.me"
+site-url = "/"
 input-404 = "not-found.md"
 additional-js = [
     "assets/js/mermaid.min.js",
