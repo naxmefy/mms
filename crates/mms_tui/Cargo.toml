@@ -1,5 +1,5 @@
 [package]
-name = "mms-tui"
+name = "mms_tui"
 version.workspace = true
 rust-version.workspace = true
 edition.workspace = true
