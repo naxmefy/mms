@@ -1,3 +1,5 @@
 # mms
 
-> [design doc](https://docs.google.com/document/d/1vo7ZVgYmSG8KRLAPqyhFYaRhm9wckB0VPF9LTuRGXFE/edit?usp=sharing) is currently `work in progress`
+> [design doc](https://www.notion.so/mms-design-doc-1ca5369453458017b097fd47e5f00d39?pvs=4)
+> is currently `work in progress`
+
