@@ -7,5 +7,5 @@ name = "mms"
 version = "0.1.0"
 
 [[package]]
-name = "mms-tui"
+name = "mms_tui"
 version = "0.1.0"
