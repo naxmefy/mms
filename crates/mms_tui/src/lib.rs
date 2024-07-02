@@ -1,6 +1,8 @@
+#[derive(Debug)]
 pub struct MMSTuiApplication {}
+
 impl MMSTuiApplication {
-    fn new() -> Result<MMSTuiApplication, ()> {
+    pub fn new() -> Result<MMSTuiApplication, ()> {
         Ok(MMSTuiApplication {})
     }
 }
