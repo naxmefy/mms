@@ -118,6 +118,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "mms_inventory"
+version = "0.1.0"
+
+[[package]]
 name = "mms_tui"
 version = "0.1.0"
 
