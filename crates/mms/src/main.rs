@@ -1,7 +1,15 @@
+mod article;
+use article::api::router as article_router;
+
+use axum::Router;
+use std::net::SocketAddr;
+
 use std::path::PathBuf;
 
 use clap::{Parser, Subcommand};
 use mms_tui::MMSTuiApplication;
+use tokio::net::TcpListener;
+use tokio::runtime::Runtime;
 
 #[derive(Parser)]
 #[command(version, about, long_about = None, bin_name = "mms")]
@@ -21,6 +29,10 @@ struct Cli {
 #[derive(Subcommand)]
 enum Commands {
     UI {},
+    Serve {
+        #[clap(short, long, default_value = "3000")]
+        port: u16,
+    },
 }
 
 fn main() {
@@ -41,12 +53,34 @@ fn main() {
 
     // You can check for the existence of subcommands, and if found use their
     // matches just as you would the top level cmd
-    match &cli.command {
+    match cli.command {
         Some(Commands::UI {}) => {
             println!("start terminal ui");
+            println!("{}", cli.verbose);
             let tui = MMSTuiApplication::new().expect("default mms tui application");
             println!("{:?}", tui)
         }
+        Some(Commands::Serve { port }) => {
+            // Eigene Tokio Runtime erzeugen
+            let rt = Runtime::new().expect("Tokio runtime");
+
+            rt.block_on(async move {
+                serve(port).await;
+            });
+        }
         None => {}
     }
+}
+
+async fn serve(port: u16) {
+    let app = Router::new().nest("/articles", article_router());
+
+    let addr = SocketAddr::from(([127, 0, 0, 1], port));
+    println!("Running on {}", addr);
+
+    let listener = TcpListener::bind(addr).await.unwrap();
+
+    axum::serve(listener, app.into_make_service())
+        .await
+        .unwrap();
 }
