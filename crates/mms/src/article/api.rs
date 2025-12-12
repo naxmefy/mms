@@ -1,6 +1,6 @@
+use crate::article::model::ArticleId;
 use axum::{routing::post, Json, Router};
 use serde::Deserialize;
-use crate::article::model::ArticleId;
 
 #[derive(Deserialize)]
 pub struct CreateArticleRequest {
@@ -20,7 +20,11 @@ async fn create_article(Json(_req): Json<CreateArticleRequest>) -> Json<String> 
 
 #[cfg(test)]
 mod tests {
-    use axum::{body::Body, http::{Request, StatusCode}, Router};
+    use axum::{
+        body::Body,
+        http::{Request, StatusCode},
+        Router,
+    };
     use tower::ServiceExt;
 
     #[tokio::test]

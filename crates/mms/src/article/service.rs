@@ -37,7 +37,9 @@ impl<R: ArticleRepository> ArticleService<R> {
     }
 
     pub async fn update_article(&self, article: &Article) -> Result<Article> {
-        if article.price < 0.0 { anyhow::bail!("Price cannot be negative"); }
+        if article.price < 0.0 {
+            anyhow::bail!("Price cannot be negative");
+        }
         self.repo.update(article).await?;
         Ok(article.clone())
     }
@@ -109,8 +111,14 @@ mod tests {
     async fn list_articles() {
         let repo = InMemoryRepo::new();
         let service = ArticleService::new(repo);
-        service.create_article("SKU123".into(), "Test".into(), 9.99).await.unwrap();
-        service.create_article("SKU456".into(), "Test_2".into(), 19.99).await.unwrap();
+        service
+            .create_article("SKU123".into(), "Test".into(), 9.99)
+            .await
+            .unwrap();
+        service
+            .create_article("SKU456".into(), "Test_2".into(), 19.99)
+            .await
+            .unwrap();
 
         let items = service.list().await.unwrap();
         assert_eq!(items.len(), 2);
@@ -121,7 +129,10 @@ mod tests {
         let repo = InMemoryRepo::new();
         let service = ArticleService::new(repo);
 
-        let article = service.create_article("SKU123".into(), "Test".into(), 9.99).await.unwrap();
+        let article = service
+            .create_article("SKU123".into(), "Test".into(), 9.99)
+            .await
+            .unwrap();
         let fetched = service.get_article(article.id).await.unwrap().unwrap();
 
         assert_eq!(fetched.sku, "SKU123");
@@ -153,7 +164,10 @@ mod tests {
         let repo = InMemoryRepo::new();
         let service = ArticleService::new(repo);
 
-        let mut article = service.create_article("SKU123".into(), "Test".into(), 9.99).await.unwrap();
+        let mut article = service
+            .create_article("SKU123".into(), "Test".into(), 9.99)
+            .await
+            .unwrap();
 
         article.name = "Updated".into();
         service.update_article(&article).await.unwrap();
@@ -167,7 +181,10 @@ mod tests {
         let repo = InMemoryRepo::new();
         let service = ArticleService::new(repo);
 
-        let article = service.create_article("SKU123".into(), "Test".into(), 9.99).await.unwrap();
+        let article = service
+            .create_article("SKU123".into(), "Test".into(), 9.99)
+            .await
+            .unwrap();
         let article_id = article.id;
 
         service.delete_article(article_id.clone()).await.unwrap();
