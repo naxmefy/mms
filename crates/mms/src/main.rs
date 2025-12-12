@@ -61,9 +61,7 @@ fn main() {
             println!("{:?}", tui)
         }
         Some(Commands::Serve { port }) => {
-            // Eigene Tokio Runtime erzeugen
             let rt = Runtime::new().expect("Tokio runtime");
-
             rt.block_on(async move {
                 serve(port).await;
             });
