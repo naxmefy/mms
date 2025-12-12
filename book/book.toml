@@ -5,7 +5,6 @@ authors = [
     "Mohammed R.W. Neundorf [https://github.com/naxmefy]"
 ]
 language = "en"
-multilingual = false
 src = "src"
 
 [rust]
