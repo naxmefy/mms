@@ -5,7 +5,9 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/book.yml'
-      - 'book/*'
+      - 'book/**'
+      - 'ROADMAP.md'
+      - 'docs/glossary.md'
 
 defaults:
   run:
