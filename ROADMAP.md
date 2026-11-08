@@ -65,6 +65,7 @@ What `mms` works on now, what comes next, and everything that is deliberately po
 ### Vision
 
 - Automated warehouse: robots unload and load trucks while the system tracks exactly what is where and how much.
+- Monitoring of warehouse operations.
 - AI assistance on top of warehouse data.
 - Bottleneck prevention.
 

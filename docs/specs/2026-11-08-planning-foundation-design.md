@@ -1,6 +1,6 @@
 # Sub-project A: Planning foundation — design
 
-- **Status:** Draft, awaiting review
+- **Status:** Accepted
 - **Date:** 2026-11-08
 - **Scope:** Documentation, planning and project organisation only. No product code changes.
 
