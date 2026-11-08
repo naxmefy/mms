@@ -6,6 +6,8 @@
 
 [Features](features.md)
 
+[Glossary](glossary.md)
+
 ---
 
 # User Guide
