@@ -1,5 +1,15 @@
 # mms
 
-> [design doc](https://www.notion.so/mms-design-doc-1ca5369453458017b097fd47e5f00d39?pvs=4)
-> is currently `work in progress`
+> merchandise management system
 
+`mms` aims to become an extensible, modular merchandise management system written in Rust.
+It is at an early stage: the first milestone is a local inventory managed from the command line.
+
+- [Roadmap](ROADMAP.md)
+- [Architecture decision records](docs/adr/README.md)
+- [Glossary](docs/glossary.md)
+- [Documentation](https://mms.nax.me)
+
+## License
+
+See [LICENSE](LICENSE).
